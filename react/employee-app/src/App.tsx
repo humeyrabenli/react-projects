@@ -1,5 +1,6 @@
 import React from "react";
 import EmployeeList from "./components/EmployesList";
+import { EmployeeContextProvider } from "./contexts/EmployeeContext";
 
 function App() {
   return (
@@ -26,7 +27,10 @@ function App() {
                 </div>
               </div>
             </div>
+            <EmployeeContextProvider>
             <EmployeeList />
+
+            </EmployeeContextProvider>
           </div>
         </div>
       </div>
