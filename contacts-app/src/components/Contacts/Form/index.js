@@ -10,10 +10,18 @@ function Form({ addContact, contacts }) {
      
   },[contacts])
 
+
+ /*  useEffect(()=>{
+    addContact([...contacts, form]);
+     
+  },[form]) */
+
   const onChangeInput = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
-  };
+   
 
+  };
+ console.log("form",form)
   const onSubmit = (e) => {
     e.preventDefault();
 
@@ -23,10 +31,10 @@ function Form({ addContact, contacts }) {
 
     addContact([...contacts, form]);
 
-    console.log(form);
+   
   };
   return (
-    <form onSubmit={onSubmit}>
+    <form>
       <div>
         <input
           name="fullname"
